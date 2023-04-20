@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>git:分支合并 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="1.git 分支的合并(merge)&#96;假设我们此时需要修复dev分支上的某个bug,此时在dev分支上创建修复分支fix,然后推进fix分支.当前的git仓库如图:注:为了方便演示,dev分支上只有一个test.cpp源文件 &#96;然后我们在fix分支上修复bug并做提交在fix分支提交之后的git仓库如图: 此时bug已经修复完毕,我们把dev和fix分支进行合并:合并之后,dev">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git:分支合并">
+<meta property="og:url" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.git 分支的合并(merge)&#96;假设我们此时需要修复dev分支上的某个bug,此时在dev分支上创建修复分支fix,然后推进fix分支.当前的git仓库如图:注:为了方便演示,dev分支上只有一个test.cpp源文件 &#96;然后我们在fix分支上修复bug并做提交在fix分支提交之后的git仓库如图: 此时bug已经修复完毕,我们把dev和fix分支进行合并:合并之后,dev">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge0.png">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge01.png">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge02.png">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge03.png">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge04.png">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge05.png">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge06.png">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge07.png">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge08.png">
+<meta property="og:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge09.png">
+<meta property="article:published_time" content="2023-04-20T09:08:04.000Z">
+<meta property="article:modified_time" content="2023-04-20T10:21:37.282Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/merge0.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -142,16 +157,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-git-分支合并" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-git-分支合并" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/">git:分支合并</a>
+    <h1 class="article-title" itemprop="name">
+      git:分支合并
     </h1>
   
 
@@ -192,6 +205,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -199,16 +233,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/04/20/git-%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git:分支切换</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -223,310 +316,37 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-git-%E5%88%86%E6%94%AF%E7%9A%84%E5%90%88%E5%B9%B6-merge"><span class="toc-number">1.</span> <span class="toc-text">1.git 分支的合并(merge)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BF%AB%E8%BF%9B%E5%90%88%E5%B9%B6"><span class="toc-number">2.</span> <span class="toc-text">2.快进合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-git-%E5%88%86%E6%94%AF%E7%9A%84%E4%B8%89%E6%96%B9%E5%90%88%E5%B9%B6"><span class="toc-number">3.</span> <span class="toc-text">3.git:分支的三方合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%86%B2%E7%AA%81%E5%90%88%E5%B9%B6"><span class="toc-number">4.</span> <span class="toc-text">4.冲突合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%BD%BF%E7%94%A8-rebase-%E8%BF%9B%E8%A1%8C%E5%90%88%E5%B9%B6"><span class="toc-number">5.</span> <span class="toc-text">5.使用 rebase 进行合并</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
 
 <div align="center" class="post-count">
     字数：805字 | 预计阅读时长：2分钟
 </div>
-
-  
-    <article id="post-git-分支切换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/">git:分支切换</a>
-    </h1>
-  
-
-
-
-
-        
-        <a href="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/" class="archive-article-date">
-  	<time datetime="2023-04-20T00:16:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-分支简介"><a href="#1-分支简介" class="headerlink" title="1.分支简介"></a>1.分支简介</h2><p>分支:是针对某类开发工作的一个提交结点序列,序列中最新的提交表示了该分支代码的最新版本。分支通常根据工作类别命名,例如: dev 、 test 分支;<font color="0099CC">使用分支意味着你可以分离各个开发路线,然后在彼此不影响情况下同时向前推进。</font></p>
-<p>当前分支:<br>一个仓库经常有多个分支。但在任何时刻,开发者只能在众多分支中的某一个分支上工作,这个处于工作状态的分支称为当前分支。<br>在 git 命令中,当前分支经常使用引用 HEAD 来表示。<font color="0099CC">HEAD指向当前分支的当前所在的某个提交节点.</font></p>
-<h2 id="2-创建分支-第一次-根提交-会创建默认分支"><a href="#2-创建分支-第一次-根提交-会创建默认分支" class="headerlink" title="2.创建分支:第一次(根提交)会创建默认分支"></a>2.创建分支:第一次(根提交)会创建默认分支</h2><p>&#96;创建仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init </span><br></pre></td></tr></table></figure>
-
-<p>&#96;查看分支</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
-
-
-
-<p>编写test.cpp源文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    std::cout&lt;&lt;&quot;branch:dev&quot;&lt;&lt;std::endl;</span><br><span class="line">    std::cout&lt;&lt;&quot;version:1.0 &quot;&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>集结并提交一个节点:<br><img src="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/branch01.png"></p>
-<h2 id="3-创建并切换到新分支"><a href="#3-创建并切换到新分支" class="headerlink" title="3.创建并切换到新分支"></a>3.创建并切换到新分支</h2><p><img src="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/branch02.png"></p>
-<h2 id="4-分支相关命令"><a href="#4-分支相关命令" class="headerlink" title="4.分支相关命令:"></a>4.分支相关命令:</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch -a           //查看分支</span><br><span class="line">git switch dev          //切换分支</span><br><span class="line">git branch test         //创建新分支</span><br><span class="line">git switch -c test      //创建并切换新分支</span><br><span class="line">git branch -d test      //删除分支</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-切换分支和分支演进"><a href="#5-切换分支和分支演进" class="headerlink" title="5.切换分支和分支演进"></a>5.切换分支和分支演进</h2><p>&#96;每次提交后HEAD随着分支一起向前移动</p>
-<p>&#96;HEAD在一次switch之后指向另一个分支:<br>如git切换回dev分支时,完成2个操作:</p>
-<ol>
-<li>HEAD 引用指向 dev 分支指针</li>
-<li>用 dev 分支指针指向的最后一个提交对象的快照来恢复<font color="0099CC">集结区</font>和<font color="0099CC">工作树</font>。</li>
-</ol>
-<h2 id="6-切换到匿名分支"><a href="#6-切换到匿名分支" class="headerlink" title="6.切换到匿名分支"></a>6.切换到匿名分支</h2><p>&#96;假设当前的git仓库如图:<br><img src="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/branch03.png"></p>
-<p>&#96;我们有时需要在某个提交节点上创建新分支,可以切换到该提交节点,得到一个匿名分支。</p>
-<p>&#96;git switch -d ce9088 &#x2F;&#x2F; 等价于 git checkout ce9088<br><font color="0099CC">相当于创建了一个没有名字的匿名分支,指向 ce9088 。</font></p>
-<p>&#96;对于匿名分支,其 commit 工作与普通情况一样,只是没有命名的分支文件被更新,由 HEAD 指向最新的提交节点。<br>下图展示了匿名分支做了 1 次提交的情形:<br><img src="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/branch04.png"></p>
-<p>&#96;丢弃匿名分支<br>匿名分支做 1 次提交后,如果此时切换到别的有名分支,此时匿名分支无法通常引用找到,就被丢掉了。</p>
-<p>&#96;匿名分支的正式命名<br>如果想保存匿名分支做的提交,可以使用 git checkout -b new 给匿名分支命名,相当于 git branch new<br>如图:<br><img src="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/branch05.png"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-<div align="center" class="post-count">
-    字数：678字 | 预计阅读时长：2分钟
-</div>
-
-  
-    <article id="post-静态库和动态库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/">静态库和动态库</a>
-    </h1>
-  
-
-
-
-
-        
-        <a href="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2023-04-19T06:28:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1、什么是库："><a href="#1、什么是库：" class="headerlink" title="1、什么是库："></a>1、什么是库：</h2><p>1.1 库是写好的，现有的，可以复用的代码。现实中每个程序都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。</p>
-<p>1.2 本质上来说库是一种可执行代码的二进制形式，可以直接载入内存执行。库有两种：静态库（.a）和动态库（.so）。</p>
-<h2 id="2、静态编译与动态编译"><a href="#2、静态编译与动态编译" class="headerlink" title="2、静态编译与动态编译:"></a>2、静态编译与动态编译:</h2><p>2.1 可执行程序链接库的时机:编译时、加载时和运行时。</p>
-<p>2.2 静态库需要在编译时链接;</p>
-<p>使用静态库做静态编译会生成完全链接的可执行程序。<br>此时,链接在程序运行之前已完成,也称为静态链接。</p>
-<p>2.3 动态库则需要加载时或运行时链接;</p>
-<p>使用共享库做动态编译时,生成的可执行程序仅仅包含了共享库的链接信息,而没有包含共享库文件的内容,处于部分链接的状态。</p>
-<p>共享库被编译成位置无关的代码 (PIC) ,可以在程序加载时或运行时被加载到内存的任何位置,与程序链接在一起。此时,链接在程序运行的起始或者中间才完全完成,也称为动态链接。</p>
-<h2 id="3、静态库的创建和使用"><a href="#3、静态库的创建和使用" class="headerlink" title="3、静态库的创建和使用"></a>3、静态库的创建和使用</h2><p>3.1<br>假设我们自己写了一个关于求一个vector数组中值的函数,想把它打包成库,方便后续的复用.</p>
-<p>头文件median.h:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#ifndef MEDIAN_H</span><br><span class="line">#define MEDIAN_H</span><br><span class="line"></span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">double median(std::vector&lt;double&gt;vec);</span><br><span class="line"></span><br><span class="line">#endif//MEDIAN_H</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>源文件median.cpp</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;stdexcept&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">double median(std::vector&lt;double&gt;vec)&#123;//求中值</span><br><span class="line">	auto size=vec.size();</span><br><span class="line">	if(size==0)</span><br><span class="line">		throw std::domain_error(&quot;median of an empty vector&quot;);</span><br><span class="line"></span><br><span class="line">	std::sort(vec.begin(),vec.end());</span><br><span class="line"></span><br><span class="line">	auto mid = size/2;</span><br><span class="line">	if(size%2==0)</span><br><span class="line">		return (vec[mid]+vec[mid-1])/2;</span><br><span class="line">	else</span><br><span class="line">		return vec[mid];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>用于测试的源文件main.cpp:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &quot;median.h&quot;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    vector&lt;double&gt; v&#123;3,1,2&#125;;</span><br><span class="line">    double m = median(v);</span><br><span class="line">    cout&lt;&lt;&quot;The median is &quot;&lt;&lt;m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>3.2 生成静态库:<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/static01.png"></p>
-<p>3.3 使用静态库:<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/static02.png"></p>
-<p>3.4 静态库的优缺点<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/static03.png"></p>
-<h2 id="4、动态库的创建和使用"><a href="#4、动态库的创建和使用" class="headerlink" title="4、动态库的创建和使用"></a>4、动态库的创建和使用</h2><p>继续以median为背景,在源文件中median.cpp添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">std::cout&lt;&lt;&quot;Version:1.0.0&quot;&lt;&lt;std::endl; //libmedian.so.1.0.0版本</span><br></pre></td></tr></table></figure>
-
-<p>4.1 版本化的共享库</p>
-<p>版本化的共享库,在构建和运行时会使用彼此软连接的, 3 个名字的文件:</p>
-<p>4.1.1<br>realname 文件 : 真正的库文件,命名规则如下图,如: libmedian.so.1.0.0<br>realname 文件内部通常会包含 soname 文件名信息</p>
-<p><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/libname.png"></p>
-<pre><code>主版本:不同的主版本之间,接口很可能不兼容
-
-次版本:增量升级,接口兼容
-
-发行版本:对次版本的错误修正和性能提升,接口不变
-</code></pre>
-<p>4.1.2<br>soname 文件:加载时链接需要搜索的共享库文件,如 libmedian.so.1<br>soname 文件 ——&gt; realname 文件 &#x2F;&#x2F;soname 保留大版本,保证 so 兼容升级</p>
-<p>4.1.3<br>linkername 文件:动态编译时链接器 ld 使用的文件,如 libmedian.so<br>linkername 文件 —— &gt; soname 文件或 realname 文件</p>
-<p>4.1.4<br>3 个文件的关系:<br>首先,动态编译源代码时,通过指定的链接参数 linkername ,找到linkername 文件软链接的 realname 文件,从 realname 文件读取所保存的 soname ,然后将 soname 保存在部分链接的可执行程序中。</p>
-<p>可执行程序加载(运行)时,会在共享库的搜索路径下依次搜索 soname 文件:<br> 若找不到 soname 文件,则报错;<br> 若找到 soname 文件,则会将其软连接的 realname 文件加载到内存中,完成与程序的链接,然后运行。<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/libname01.png"></p>
-<p>4.2 生成动态库:<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/lib02.png"></p>
-<p>4.3 使用动态库:<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/lib03.png"></p>
-<p>4.4 动态库的优缺点<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/lib01.png"></p>
-<p>4.5<br>模拟版本升级,执行程序的改变:</p>
-<p>改变median.cpp内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">std::cout&lt;&lt;&quot;Version:1.0.1&quot;&lt;&lt;std::endl; //libmedian.so.1.0.1版本</span><br></pre></td></tr></table></figure>
-
-<p>实验:<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/lib04.png"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-<div align="center" class="post-count">
-    字数：1k字 | 预计阅读时长：4分钟
-</div>
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-
-
-        
-        <a href="/2023/04/18/hello-world/" class="archive-article-date">
-  	<time datetime="2023-04-18T15:57:18.394Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/04/18/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-<div align="center" class="post-count">
-    字数：75字 | 预计阅读时长：1分钟
-</div>
-
-  
-  
-
 
           </div>
         </div>
@@ -551,8 +371,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

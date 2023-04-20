@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>静态库和动态库 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、什么是库： 1.1 库是写好的，现有的，可以复用的代码。现实中每个程序都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。 1.2 本质上来说库是一种可执行代码的二进制形式，可以直接载入内存执行。库有两种：静态库（.a）和动态库（.so）。 2、静态编译与动态编译: 2.1 可执行程序链接库的时机:编译时、加载时和运行时。 2.2 静态库需要在编译时链接; 使用静">
+  <meta name="description" content="1、什么是库：1.1 库是写好的，现有的，可以复用的代码。现实中每个程序都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。 1.2 本质上来说库是一种可执行代码的二进制形式，可以直接载入内存执行。库有两种：静态库（.a）和动态库（.so）。 2、静态编译与动态编译:2.1 可执行程序链接库的时机:编译时、加载时和运行时。 2.2 静态库需要在编译时链接; 使用静态库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="静态库和动态库">
 <meta property="og:url" content="http://example.com/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、什么是库： 1.1 库是写好的，现有的，可以复用的代码。现实中每个程序都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。 1.2 本质上来说库是一种可执行代码的二进制形式，可以直接载入内存执行。库有两种：静态库（.a）和动态库（.so）。 2、静态编译与动态编译: 2.1 可执行程序链接库的时机:编译时、加载时和运行时。 2.2 静态库需要在编译时链接; 使用静">
+<meta property="og:description" content="1、什么是库：1.1 库是写好的，现有的，可以复用的代码。现实中每个程序都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。 1.2 本质上来说库是一种可执行代码的二进制形式，可以直接载入内存执行。库有两种：静态库（.a）和动态库（.so）。 2、静态编译与动态编译:2.1 可执行程序链接库的时机:编译时、加载时和运行时。 2.2 静态库需要在编译时链接; 使用静态库">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/static01.png">
 <meta property="og:image" content="http://example.com/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/static02.png">
@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://example.com/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/lib01.png">
 <meta property="og:image" content="http://example.com/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/lib04.png">
 <meta property="article:published_time" content="2023-04-19T06:28:26.000Z">
-<meta property="article:modified_time" content="2023-04-19T08:03:20.837Z">
+<meta property="article:modified_time" content="2023-04-20T08:09:12.556Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/static01.png">
@@ -72,10 +72,10 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数: 2
+    总文章数: 4
     </nav>
     <nav>
-    总字数: <span class="post-count">1.1k</span>
+    总字数: <span class="post-count">2.6k</span>
     </nav>
 		<nav class="header-smart-menu">
     		
@@ -179,20 +179,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、什么是库：</p>
-<p>1.1 库是写好的，现有的，可以复用的代码。现实中每个程序都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。</p>
+        <h2 id="1、什么是库："><a href="#1、什么是库：" class="headerlink" title="1、什么是库："></a>1、什么是库：</h2><p>1.1 库是写好的，现有的，可以复用的代码。现实中每个程序都要依赖很多基础的底层库，不可能每个人的代码都从零开始，因此库的存在意义非同寻常。</p>
 <p>1.2 本质上来说库是一种可执行代码的二进制形式，可以直接载入内存执行。库有两种：静态库（.a）和动态库（.so）。</p>
-<p>2、静态编译与动态编译:</p>
-<p>2.1 可执行程序链接库的时机:编译时、加载时和运行时。</p>
+<h2 id="2、静态编译与动态编译"><a href="#2、静态编译与动态编译" class="headerlink" title="2、静态编译与动态编译:"></a>2、静态编译与动态编译:</h2><p>2.1 可执行程序链接库的时机:编译时、加载时和运行时。</p>
 <p>2.2 静态库需要在编译时链接;</p>
 <p>使用静态库做静态编译会生成完全链接的可执行程序。<br>此时,链接在程序运行之前已完成,也称为静态链接。</p>
 <p>2.3 动态库则需要加载时或运行时链接;</p>
 <p>使用共享库做动态编译时,生成的可执行程序仅仅包含了共享库的链接信息,而没有包含共享库文件的内容,处于部分链接的状态。</p>
 <p>共享库被编译成位置无关的代码 (PIC) ,可以在程序加载时或运行时被加载到内存的任何位置,与程序链接在一起。此时,链接在程序运行的起始或者中间才完全完成,也称为动态链接。</p>
-<ol start="3">
-<li>静态库的创建和使用</li>
-</ol>
-<p>3.1<br>假设我们自己写了一个关于求一个vector数组中值的函数,想把它打包成库,方便后续的复用.</p>
+<h2 id="3、静态库的创建和使用"><a href="#3、静态库的创建和使用" class="headerlink" title="3、静态库的创建和使用"></a>3、静态库的创建和使用</h2><p>3.1<br>假设我们自己写了一个关于求一个vector数组中值的函数,想把它打包成库,方便后续的复用.</p>
 <p>头文件median.h:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#ifndef MEDIAN_H</span><br><span class="line">#define MEDIAN_H</span><br><span class="line"></span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">double median(std::vector&lt;double&gt;vec);</span><br><span class="line"></span><br><span class="line">#endif//MEDIAN_H</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -205,10 +200,7 @@
 <p>3.2 生成静态库:<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/static01.png"></p>
 <p>3.3 使用静态库:<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/static02.png"></p>
 <p>3.4 静态库的优缺点<br><img src="/2023/04/19/%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93/static03.png"></p>
-<ol start="4">
-<li>动态库的创建和使用</li>
-</ol>
-<p>继续以median为背景,在源文件中median.cpp添加</p>
+<h2 id="4、动态库的创建和使用"><a href="#4、动态库的创建和使用" class="headerlink" title="4、动态库的创建和使用"></a>4、动态库的创建和使用</h2><p>继续以median为背景,在源文件中median.cpp添加</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">std::cout&lt;&lt;&quot;Version:1.0.0&quot;&lt;&lt;std::endl; //libmedian.so.1.0.0版本</span><br></pre></td></tr></table></figure>
 
 <p>4.1 版本化的共享库</p>
@@ -326,6 +318,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2023/04/20/git-%E5%88%86%E6%94%AF%E5%88%87%E6%8D%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          git:分支切换
+        
+      </div>
+    </a>
+  
   
     <a href="/2023/04/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Hello World</div>
@@ -355,7 +356,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E5%BA%93%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">1、什么是库：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%E4%B8%8E%E5%8A%A8%E6%80%81%E7%BC%96%E8%AF%91"><span class="toc-number">2.</span> <span class="toc-text">2、静态编译与动态编译:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E9%9D%99%E6%80%81%E5%BA%93%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">3、静态库的创建和使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">4、动态库的创建和使用</span></a></li></ol>
                     </div>
                 </span>
             </div>
