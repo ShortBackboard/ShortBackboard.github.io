@@ -58,10 +58,10 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数: 5
+    总文章数: 6
     </nav>
     <nav>
-    总字数: <span class="post-count">3.3k</span>
+    总字数: <span class="post-count">3.9k</span>
     </nav>
 		<nav class="header-smart-menu">
     		
@@ -143,6 +143,92 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-git-储藏文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/">git:储藏文件</a>
+    </h1>
+  
+
+
+
+
+        
+        <a href="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/" class="archive-article-date">
+  	<time datetime="2023-04-22T06:20:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="有时-你想切换分支-但是当前项目上还有未完成的任务-你不想对这个做到一半的项目进行提交-那么此时可以使用-git-stash-它可以让你切换分支前-不用将半成品提交到当前分支。"><a href="#有时-你想切换分支-但是当前项目上还有未完成的任务-你不想对这个做到一半的项目进行提交-那么此时可以使用-git-stash-它可以让你切换分支前-不用将半成品提交到当前分支。" class="headerlink" title="有时,你想切换分支,但是当前项目上还有未完成的任务,你不想对这个做到一半的项目进行提交,那么此时可以使用 git stash ,它可以让你切换分支前,不用将半成品提交到当前分支。"></a>有时,你想切换分支,但是当前项目上还有未完成的任务,你不想对这个做到一半的项目进行提交,那么此时可以使用 git stash ,它可以让你切换分支前,不用将半成品提交到当前分支。</h2><p>&#96; 通常, stash 表示“将某物安全地存放在隐蔽的地方”。</p>
+<p>&#96; git stash 可以让你<font color="0099CC">不用提交也不用删除修改,</font>暂时安全地保存数据( 默认包括工作树和集结区 ) 到某个贮藏地,让工作树回到干净的状态,以栈的方式加入到stash list.</p>
+<h2 id="git-stash-操作示例如图"><a href="#git-stash-操作示例如图" class="headerlink" title="git stash 操作示例如图:"></a>git stash 操作示例如图:</h2><p><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s01.png"><br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s02.png"><br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s03.png"></p>
+<h2 id="git-stash-apply"><a href="#git-stash-apply" class="headerlink" title="git stash apply"></a><font color="0099CC">git stash apply</font></h2><p>通过 git stash apply 命令,你可以 apply 不同的 stashed works 到当前工作树,但是不会删除这些 stashed works 。</p>
+<p><code>如果想 apply 某个早期的 stash ,可以通过名字指定它,比如:git stash apply --index stash@&#123;1&#125; </code>如果你不指定某个 stash , git 会选择最近的 stash 来 apply(栈顶)</p>
+<p>&#96;Apply a stash 可以在任意的分支上,并不要求必须 apply 到一个干净的工作树,或者必须 apply 到原来贮存的分支上。</p>
+<p>&#96;你可以在一个分支上保存一个 stash ,切换到另一个分支,然后尝试 apply 这些修改。当你 apply a stash 时,工作树中也可能有已修改和未提交的文件 </p>
+<p><font color="0099CC">&#96;如果存在不能 cleanly 地 apply 的东西, git 会让你手动合并冲突。</font></p>
+<h2 id="git-stash-apply操作示例如图"><a href="#git-stash-apply操作示例如图" class="headerlink" title="git stash apply操作示例如图:"></a>git stash apply操作示例如图:</h2><p><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s04.png"></p>
+<h2 id="git-stash-的其他用法"><a href="#git-stash-的其他用法" class="headerlink" title="git stash 的其他用法"></a>git stash 的其他用法</h2><p>&#96;git stash drop 丢掉栈顶的 stash</p>
+<p>&#96;git stash drop stash@{1}   指定要丢掉的stash</p>
+<p>&#96;git stash clear 用于移除所有的 stashes 。</p>
+<p>操作如图:<br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s05.png"><br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s06.png"></p>
+<h2 id="96-git-stash-–all-可以贮藏所有的工作树和集结区-包括未被跟踪的文件"><a href="#96-git-stash-–all-可以贮藏所有的工作树和集结区-包括未被跟踪的文件" class="headerlink" title="&#96;git stash –all   可以贮藏所有的工作树和集结区,包括未被跟踪的文件"></a><font color="0099CC">&#96;git stash –all   可以贮藏所有的工作树和集结区,包括未被跟踪的文件</font></h2><p>&#96;git stash show 显示 stash 中的修改,作为 stash 内容与创建 stash 时的 commit 之间的区别。</p>
+<p>操作如图:<br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s07.png"><br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s08.png"><br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s09.png"></p>
+<p>&#96;git stash pop : 如果想在 apply 某个 stash 时同时将它 drop 掉,可以使用 pop 命令<br>操作如图:<br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s10.png"></p>
+<p>&#96;git stash push 贮藏部分文件 : 例如工作树有几个已修改的文件,<font color="0099CC">有 1 个文件不想提交(已经集结),</font>那么可以使用 git stash push fileName 来暂存这个文件。</p>
+<p>操作如图:<br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s11.png"><br><img src="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/s12.png"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/04/22/git-%E5%82%A8%E8%97%8F%E6%96%87%E4%BB%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+<div align="center" class="post-count">
+    字数：575字 | 预计阅读时长：2分钟
+</div>
+
   
     <article id="post-git-恢复文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
