@@ -58,10 +58,10 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数: 6
+    总文章数: 7
     </nav>
     <nav>
-    总字数: <span class="post-count">3.9k</span>
+    总字数: <span class="post-count">4.2k</span>
     </nav>
 		<nav class="header-smart-menu">
     		
@@ -143,6 +143,81 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-git-分支重置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/04/23/git-%E5%88%86%E6%94%AF%E9%87%8D%E7%BD%AE/">git:分支重置</a>
+    </h1>
+  
+
+
+
+
+        
+        <a href="/2023/04/23/git-%E5%88%86%E6%94%AF%E9%87%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2023-04-23T00:17:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>git 默认创建的第一个开发分支名是 master , master 分支实际上是用一个文件 .git&#x2F;refs&#x2F;heads&#x2F;master 表示,其内容就是该分支中最新提交commit 对象的索引 ID 。</p>
+<p>有时候,我们希望能够丢弃分支上的某些提交,让分支回到以前的某个提交的状态,<font color="0099CC">此时只需要修改分支文件 .git&#x2F;refs&#x2F;heads&#x2F;master ,</font>让它指向以前的commit 节点,这就是该分支的重置。 </p>
+<p><font color="0099CC">git reset 提供了分支的重置功能。</font></p>
+<h2 id="git-reset-的用法"><a href="#git-reset-的用法" class="headerlink" title="git reset 的用法"></a>git reset 的用法</h2><p>&#96;1.git reset –soft HEAD~  撤销提交,此时已经提交的文件会进入到集结区<br>操作如图:<br><img src="/2023/04/23/git-%E5%88%86%E6%94%AF%E9%87%8D%E7%BD%AE/re01.png"><br><img src="/2023/04/23/git-%E5%88%86%E6%94%AF%E9%87%8D%E7%BD%AE/re011.png"></p>
+<p>&#96;2.git reset [–mixed] HEAD~   撤销提交,此时已经提交的文件还在,但是没有集结<br>操作如图:<br><img src="/2023/04/23/git-%E5%88%86%E6%94%AF%E9%87%8D%E7%BD%AE/re02.png"><br><img src="/2023/04/23/git-%E5%88%86%E6%94%AF%E9%87%8D%E7%BD%AE/re022.png"></p>
+<p>&#96;3.git reset –hard HEAD~  撤销提交,此时刚才提交的版本的文件都已经不存在  (谨用!)<br>操作如图:<br><img src="/2023/04/23/git-%E5%88%86%E6%94%AF%E9%87%8D%E7%BD%AE/re03.png"></p>
+<p>注:HEAD<del>后可接数值,撤销多次提交,结果的文件状态和参数对应一致.<br>eg: git reset –soft HEAD</del>2</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/04/23/git-%E5%88%86%E6%94%AF%E9%87%8D%E7%BD%AE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+<div align="center" class="post-count">
+    字数：272字 | 预计阅读时长：1分钟
+</div>
+
   
     <article id="post-git-储藏文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
